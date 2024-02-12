@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  
+  /* Navbar styles */
+  .navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      transition: background-color 0.3s; /* Smooth transition for background color */
+    }
+
+    .navbar:hover {
+      background-color: #555; /* Change background color on hover */
+    }
+
+    /* Navbar links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.3s; /* Smooth transition for text color */
+    }
+
+    .navbar a:hover {
+      color: lightblue; /* Change text color on hover */
+    }
+    
+  .Flying{
+    position: relative;
+    top: 100px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 520px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+  }
+  
+  .intro h1 {
+    font-size: 60px;
+    color: #f5d60b;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* text-decoration: underline; */
+    margin: 0;
+  }
+  
+  #logo {
+  border: 5px solid rgb(255, 255, 255); 
+  margin: 5px; 
+  border-radius: 10px;
+  }
+
+  .intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  .intro button {
+    background-color: #5edaf0;
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+  }
+  
+  .intro button:hover {
+    background-color: #333;
+  }
+  
+  .achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  
+  .achievements .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #ced8d0; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .achievements .work i {
+    font-size: 60px;
+    color: #5edaf0;
+    border: 4px solid #5edaf0;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  
+  .achievements .work .work-heading {
+    font-size: 26px;
+    color: #333;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  
+  .achievements .work .work-text {
+    font-size: 18px;
+    color: #585858;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+    text-align: center;
+    background-color: #f5f5f5; 
+  }
+  
+  .about-me img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .about-me-text {
+    flex-grow: 1;
+    text-align: left;
+    padding: 0 20px;
+  }
+  
+  .about-me-text h2 {
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .about-me-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 20px 0;
+  }
+
+  body {
+        background-image: url("https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        /* background-color: darkgray; Fallback background color */
+        animation: fadeIn 5s;
+      }
+  
+  .bottom-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+
+  .bottom-links .links p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .bottom-links .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .bottom-links .links span {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  
+  .bottom-links .links a {
+    text-decoration: none;
+    color: #a1a1a1;
+    padding: 10px}
+    #scrolling-img {
+      text-align: center;
+  }
+  
+  .logostyle{
+    text-align: center;
+    border: 2px solid yellow;
+    border-radius: 15px;
+  }
+  
+
+  /* responsive */
+@media (max-width: 768px) {
+
+      .achievements {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      .achievements .work {
+        margin: 10px 0;
+        padding: 20px;
+      }
+
+      .achievements .work i {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .achievements .work .work-heading {
+        font-size: 20px;
+      }
+
+      .achievements .work .work-text {
+        font-size: 14px;
+      }
+
+      .about-me {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      .about-me img {
+        max-width: 100%;
+      }
+
+      .bottom-links {
+        flex-direction: column;
+        color: #1c1c1c;
+        padding: 20px 0;
+      }
+
+      .bottom-links .links {
+        color: #1c1c1c;
+        padding: 20px 0;
+      }
+      
+      .bottom-links .links span {
+        font-size: 16px;
+        margin: 5px 0;
+        color: #fff;
+      }
+    }
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .autoanimationText{
+    color: #f35a08;
+  }
+      /* animation */
+</style>
+
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logo.jpg" height="75px" width="70px" id="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about1.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact1.html">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery1.html">Gallery</a>
+        </li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main>
+<!-- scrolling images -->
+<marquee behavior="scroll" direction="left" class="Flying" >
+  <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" width="400" height="350" alt="Flying Bat">
+  <img src="https://images.pexels.com/photos/17896689/pexels-photo-17896689/free-photo-of-meu-sonho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="350" alt="Flying Bat">
+  <img src="https://images.pexels.com/photos/253419/pexels-photo-253419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="350" alt="Flying Bat">
+  <img src="https://images.pexels.com/photos/1586942/pexels-photo-1586942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400" height="350" alt="Flying Bat">
+</marquee>
+<div class="intro">
+<h1>  THE <span class="autoanimationText"></span> </h1>
+<hr>
+<p>Cooked with love .</p>
+</div>
+<div class="achievements">
+<div class="work">
+  <p class="work-heading">why our food?</p>
+  <p class="work-text">Beause our food is very tasty and also good in quality. we maintain our quality with very good quality.</p>
+</div>
+<div class="work">
+  <p class="work-heading">Skills</p>
+  <p class="work-text">we knows and appreciates the fact, that its the hardworking & smart people who make difference. People who care, make customers happy and happy customers means a successful business.
+  </p>
+</div>
+<div class="work">
+  <p class="work-heading">Aim</p>
+  <p class="work-text">We see a lot of potential in street food and it is our dream to serve our street food all around the world with good quality.</p>
+</div>
+</div>
+<div class="about-me">
+<div class="about-me-text">
+  <h2>About owner</h2>
+  <p>i am the owner 
+
+    (information about owner)
+  </p>
+</div>
+<img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
+</div>
+</main>
+<footer>
+
+    <div class="bottom-links bg-dark" >
+      <div class="links bg-dark">
+        <p class="copy">&copy;The Food Lab</p>
+        <span>Social Links</span>
+        <div>
+        <a href="https://www.instagram.com/food_lab007/"><img src="instagram.webp" height="45px" width="45px"></a></div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+  <script>
+    var typed = new Typed(".autoanimationText", {
+      strings: ["FOOD LAB", "FOOD LAB"],
+      typeSpeed: 100, // Corrected from typespeed
+      backSpeed: 100, // Corrected from backspeed
+      loop: true
+    });
+  </script>
+
+
+</body>
+</html>
+
+
